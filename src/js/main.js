@@ -1327,6 +1327,7 @@ function addLongWeekendPlans(id, days, date, extra) {
 
 holidayContent.addEventListener("click", (e) => {
   let icon = e.target.closest(".holiday-icon");
+  if (!icon) return;
   let id = icon.dataset.id;
 
   let card = icon.closest(".holiday-card");
@@ -1353,6 +1354,7 @@ holidayContent.addEventListener("click", (e) => {
 
 eventContent.addEventListener("click", (e) => {
   let targetIcon = e.target.closest(".event-icon");
+  if (!targetIcon) return;
   let id = targetIcon.dataset.id;
   console.log(`event-${id}`);
 
@@ -1377,6 +1379,7 @@ eventContent.addEventListener("click", (e) => {
 
 lwContent.addEventListener("click", (e) => {
   let targetIcon = e.target.closest(".lw-icon");
+  if (!targetIcon) return;
   let id = targetIcon.dataset.id;
   console.log(`lw-${id}`);
 
